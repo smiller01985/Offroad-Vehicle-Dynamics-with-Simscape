@@ -16,3 +16,9 @@ publish('offroad_ex03_car_bump.m','showCode',true)
 bdclose('sm_car');
 close all
 
+cd(fileparts(which('offroad_ex04_car_steer.m')))
+publish('offroad_ex04_car_steer.m','showCode',true)
+bdclose('sm_car');
+close all
+
+
