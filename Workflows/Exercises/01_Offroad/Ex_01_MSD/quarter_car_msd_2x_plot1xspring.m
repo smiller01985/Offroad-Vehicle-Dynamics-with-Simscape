@@ -38,7 +38,7 @@ hold on
 plot(simlog_t, simlog_xUSM,...
     'LineWidth', 2,'DisplayName','Unsprung Mass')
 plot(simlog_t, simlog_xRoad,...
-    'k--','LineWidth', 1,'DisplayName','Road')
+    'g--','LineWidth', 1,'DisplayName','Road')
 hold off
 grid on
 title('Quarter-Car Response')
@@ -48,7 +48,7 @@ legend('Location','Best')
 
 if(length(logsout_freq.Data)>1)
     ah(2) = subplot(212);
-    plot(logsout_freq.Time, logsout_freq.Data,'k','LineWidth', 1);
+    plot(logsout_freq.Time, logsout_freq.Data,'g','LineWidth', 1);
     title('Road Input Frequency')
     xlabel('Time (s)')
     ylabel('Freq (Hz)')
