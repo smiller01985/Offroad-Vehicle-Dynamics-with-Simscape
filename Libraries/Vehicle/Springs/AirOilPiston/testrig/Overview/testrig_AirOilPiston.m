@@ -142,6 +142,18 @@ delete(h(1:2))             % delete CVD and Orifice
 legend(ax1,'show')
 set(ax1,'YLim',[-0.3 0.3])
 
+%% Simulation Results: Soft Suspension, Rough Road Input
+%
+% This test actuates the road height using a rough road profile for road
+% height.  Spring deflection and damper flow are plotted. The soft
+% suspension is selected.
+%
+
+testrig_AirOilPiston_test_config('testrig_AirOilPiston','Rough','Soft')
+sim('testrig_AirOilPiston')
+testrig_AirOilPiston_plot1xspring
+testrig_AirOilPiston_plot2qdamper
+
 %% Simulation Results: Soft Suspension, Ride Height System
 %
 % This test holds the road height constant as the ride height system adds

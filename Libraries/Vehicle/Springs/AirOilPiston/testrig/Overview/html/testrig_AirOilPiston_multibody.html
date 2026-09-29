@@ -9,7 +9,7 @@ To make changes, update the MATLAB code and republish this document.
 <title>Hydropneumatic Spring-Damper Testrig, Multibody Model</title>
 <meta name="generator" content="MATLAB 26.1">
 <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
-<meta name="DC.date" content="2026-09-28">
+<meta name="DC.date" content="2026-09-29">
 <meta name="DC.source" content="testrig_AirOilPiston_multibody.m">
 <style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
@@ -114,10 +114,13 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 <a href="#11">Simulation Results: Stiff Suspension, Chirp Input</a>
 </li>
 <li>
-<a href="#13">Simulation Results: Soft Suspension, Ride Height System</a>
+<a href="#13">Simulation Results: Soft Suspension, Rough Road Input</a>
 </li>
 <li>
-<a href="#14">Simulation Results: Stiff Suspension, Ride Height System</a>
+<a href="#14">Simulation Results: Soft Suspension, Ride Height System</a>
+</li>
+<li>
+<a href="#15">Simulation Results: Stiff Suspension, Ride Height System</a>
 </li>
 </ul>
 </div>
@@ -155,11 +158,13 @@ affected.</pre>
 <img vspace="5" hspace="5" src="testrig_AirOilPiston_multibody_14.png" alt=""> <img vspace="5" hspace="5" src="testrig_AirOilPiston_multibody_15.png" alt=""> <pre>Removing the orifice damper flows from the upper plot, we can see that
 when the pressure relief valves open, the response of the system is
 affected.</pre>
-<img vspace="5" hspace="5" src="testrig_AirOilPiston_multibody_16.png" alt=""> <h2 id="13">Simulation Results: Soft Suspension, Ride Height System</h2>
+<img vspace="5" hspace="5" src="testrig_AirOilPiston_multibody_16.png" alt=""> <h2 id="13">Simulation Results: Soft Suspension, Rough Road Input</h2>
+<p>This test actuates the road height using a rough road profile for road height. Spring deflection and damper flow are plotted. The soft suspension is selected.</p>
+<img vspace="5" hspace="5" src="testrig_AirOilPiston_multibody_17.png" alt=""> <img vspace="5" hspace="5" src="testrig_AirOilPiston_multibody_18.png" alt=""> <h2 id="14">Simulation Results: Soft Suspension, Ride Height System</h2>
 <p>This test holds the road height constant as the ride height system adds and removes oil from the lower chamber. The soft suspension is selected.</p>
-<img vspace="5" hspace="5" src="testrig_AirOilPiston_multibody_17.png" alt=""> <h2 id="14">Simulation Results: Stiff Suspension, Ride Height System</h2>
+<img vspace="5" hspace="5" src="testrig_AirOilPiston_multibody_19.png" alt=""> <h2 id="15">Simulation Results: Stiff Suspension, Ride Height System</h2>
 <p>This test holds the road height constant as the ride height system adds and removes oil from the lower chamber. The stiff suspension is selected.</p>
-<img vspace="5" hspace="5" src="testrig_AirOilPiston_multibody_18.png" alt=""> <p class="footer">Copyright 2018-2025 The MathWorks, Inc.<br>
+<img vspace="5" hspace="5" src="testrig_AirOilPiston_multibody_20.png" alt=""> <p class="footer">Copyright 2018-2025 The MathWorks, Inc.<br>
 <a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2026a</a>
 <br>
 </p>
@@ -310,6 +315,18 @@ h = findobj(ax1,'Type','line');
 delete(h(1:2))             % delete CVD and Orifice
 legend(ax1,'show')
 set(ax1,'YLim',[-0.3 0.3])
+
+%% Simulation Results: Soft Suspension, Rough Road Input
+%
+% This test actuates the road height using a rough road profile for road
+% height. Spring deflection and damper flow are plotted. The soft
+% suspension is selected.
+%
+
+testrig_AirOilPiston_test_config('testrig_AirOilPiston_multibody','Rough','Soft')
+sim('testrig_AirOilPiston_multibody')
+testrig_AirOilPiston_plot1xspring
+testrig_AirOilPiston_plot2qdamper
 
 %% Simulation Results: Soft Suspension, Ride Height System
 %
