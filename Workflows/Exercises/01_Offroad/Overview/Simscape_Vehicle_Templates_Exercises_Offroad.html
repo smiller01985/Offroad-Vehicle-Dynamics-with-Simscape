@@ -9,7 +9,7 @@ To make changes, update the MATLAB code and republish this document.
 <title>Offroad Vehicle Dynamics Exercises</title>
 <meta name="generator" content="MATLAB 26.1">
 <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
-<meta name="DC.date" content="2026-09-28">
+<meta name="DC.date" content="2026-09-29">
 <meta name="DC.source" content="Simscape_Vehicle_Templates_Exercises_Offroad.m">
 <style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
@@ -80,10 +80,10 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 <p>
 <span style="font-family:Arial">
 <span style="font-size:10pt">
-<tr>1.  Double Mass-Spring-Damper, Quarter-Car Model: <a href="matlab:web('offroad_ex01_msd.html');">Description</a>, <a href="matlab:edit('offroad_ex01_msd.m');">Code</a><br>
-<tr>2.  Hydropneumatic Suspension, Quarter-Car Model: <a href="matlab:web('offroad_ex02_airOilSpring.html');">Description</a>, <a href="matlab:edit('offroad_ex02_airOilSpring.m');">Code</a><br>
-<tr>3.  Hydropneumatic Suspension, Full Vehicle: <a href="matlab:web('offroad_ex03_car_bump.html');">Description</a>, <a href="matlab:edit('offroad_ex03_car_bump.m');">Code</a><br>
-<tr>4.  Nonlinear Suspension, Full Vehicle: <a href="matlab:web('offroad_ex04_car_steer.html');">Description</a>, <a href="matlab:edit('offroad_ex04_car_steer.m');">Code</a><br>
+<tr>1.  Double Mass-Spring-Damper, Quarter-Car Model: <a href="matlab:cd(fileparts(which('offroad_ex01_msd.m')));web('offroad_ex01_msd.html');">Description</a>, <a href="matlab:cd(fileparts(which('offroad_ex01_msd.m')));edit('offroad_ex01_msd.m');">Code</a><br>
+<tr>2.  Hydropneumatic Suspension, Quarter-Car Model: <a href="matlab:cd(fileparts(which('offroad_ex02_airOilSpring.m')));web('offroad_ex02_airOilSpring.html');">Description</a>, <a href="matlab:cd(fileparts(which('offroad_ex02_airOilSpring.m')));edit('offroad_ex02_airOilSpring.m');">Code</a><br>
+<tr>3.  Hydropneumatic Suspension, Full Vehicle: <a href="matlab:cd(fileparts(which('offroad_ex03_car_bump.m')));web('offroad_ex03_car_bump.html');">Description</a>, <a href="matlab:cd(fileparts(which('offroad_ex03_car_bump.m')));edit('offroad_ex03_car_bump.m');">Code</a><br>
+<tr>4.  Nonlinear Suspension, Full Vehicle: <a href="matlab:cd(fileparts(which('offroad_ex04_car_steer.m')));web('offroad_ex04_car_steer.html');">Description</a>, <a href="matlab:cd(fileparts(which('offroad_ex04_car_steer.m')));edit('offroad_ex04_car_steer.m');">Code</a><br>
 <br>
 </style>
 </style>
@@ -102,10 +102,10 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 % <html>
 % <span style="font-family:Arial">
 % <span style="font-size:10pt">
-% <tr>1.  Double Mass-Spring-Damper, Quarter-Car Model: <a href="matlab:web('offroad_ex01_msd.html');">Description</a>, <a href="matlab:edit('offroad_ex01_msd.m');">Code</a><br> 
-% <tr>2.  Hydropneumatic Suspension, Quarter-Car Model: <a href="matlab:web('offroad_ex02_airOilSpring.html');">Description</a>, <a href="matlab:edit('offroad_ex02_airOilSpring.m');">Code</a><br> 
-% <tr>3.  Hydropneumatic Suspension, Full Vehicle: <a href="matlab:web('offroad_ex03_car_bump.html');">Description</a>, <a href="matlab:edit('offroad_ex03_car_bump.m');">Code</a><br> 
-% <tr>4.  Nonlinear Suspension, Full Vehicle: <a href="matlab:web('offroad_ex04_car_steer.html');">Description</a>, <a href="matlab:edit('offroad_ex04_car_steer.m');">Code</a><br> 
+% <tr>1.  Double Mass-Spring-Damper, Quarter-Car Model: <a href="matlab:cd(fileparts(which('offroad_ex01_msd.m')));web('offroad_ex01_msd.html');">Description</a>, <a href="matlab:cd(fileparts(which('offroad_ex01_msd.m')));edit('offroad_ex01_msd.m');">Code</a><br> 
+% <tr>2.  Hydropneumatic Suspension, Quarter-Car Model: <a href="matlab:cd(fileparts(which('offroad_ex02_airOilSpring.m')));web('offroad_ex02_airOilSpring.html');">Description</a>, <a href="matlab:cd(fileparts(which('offroad_ex02_airOilSpring.m')));edit('offroad_ex02_airOilSpring.m');">Code</a><br> 
+% <tr>3.  Hydropneumatic Suspension, Full Vehicle: <a href="matlab:cd(fileparts(which('offroad_ex03_car_bump.m')));web('offroad_ex03_car_bump.html');">Description</a>, <a href="matlab:cd(fileparts(which('offroad_ex03_car_bump.m')));edit('offroad_ex03_car_bump.m');">Code</a><br> 
+% <tr>4.  Nonlinear Suspension, Full Vehicle: <a href="matlab:cd(fileparts(which('offroad_ex04_car_steer.m')));web('offroad_ex04_car_steer.html');">Description</a>, <a href="matlab:cd(fileparts(which('offroad_ex04_car_steer.m')));edit('offroad_ex04_car_steer.m');">Code</a><br> 
 % <br>
 % </style>
 % </style>
