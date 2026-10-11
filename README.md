@@ -11,7 +11,7 @@ You can:
    5. Render the results in photo-realistic animation (Unreal Engine)
 
 The templates are designed to be extendable. Create your own variant for any portion 
-of the vehicle model (such as the brakes, suspension, or drivetrain) and you can 
+of the vehicle model (such as the brakes, suspension, and drivetrain) and you can 
 adjust the libraries so that variant can be selected.
 
 **Please visit the [Simscape Vehicle Templates](https://www.mathworks.com/solutions/physical-modeling/simscape-vehicle-templates.html) page** for animations and videos that show what you can do with these models.
